@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import { API } from 'aws-amplify';
 import { PageHeader, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { connect } from 'react-redux';
 import { LinkContainer } from 'react-router-bootstrap';
 import "./index.css";
+
+const mapStateToProps = (state) => {
+  return {
+    isAuthenticated: state.authenticate.isAuthenticated,
+  }
+};
 
 class Home extends Component {
   constructor(props) {
@@ -50,9 +57,11 @@ class Home extends Component {
               to="/notes/new"
             >
               <ListGroupItem>
-                <h4>
-                  <b>{"\uFF0B"}</b> Create a new note
-                </h4>
+                <LinkContainer to="/notes/new">
+                  <h4>
+                    <b>{"\uFF0B"}</b> Create a new note
+                  </h4>
+                </LinkContainer>
               </ListGroupItem>
             </LinkContainer>
     );
@@ -87,4 +96,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default connect(mapStateToProps)(Home);

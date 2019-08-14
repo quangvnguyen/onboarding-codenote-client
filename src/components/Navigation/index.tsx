@@ -1,8 +1,24 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
+import { connect } from 'react-redux';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import { hasAuthenticated } from '../../actions';
+
+const mapStateToProps = (state) => {
+  return {
+    isAuthenticated: state.authenticate.isAuthenticated,
+  }
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    userHasAuthenticated: isAuthenticated => {
+      dispatch(hasAuthenticated(isAuthenticated))
+    }
+  }
+};
 
 class Navigation extends React.Component {
   handleLogout = async () => {
@@ -40,4 +56,4 @@ class Navigation extends React.Component {
   }
 }
 
-export default Navigation;
+export default connect(mapStateToProps, mapDispatchToProps)(Navigation);

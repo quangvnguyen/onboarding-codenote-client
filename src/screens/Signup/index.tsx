@@ -6,8 +6,18 @@ import {
   ControlLabel
 } from "react-bootstrap";
 import { Auth } from 'aws-amplify';
+import { connect } from 'react-redux';
 import LoaderButton from '../../components/LoaderButton';
+import { hasAuthenticated } from '../../actions';
 import "./index.css";
+
+const mapDispatchToProps = dispatch => {
+  return {
+    userHasAuthenticated: isAuthenticated => {
+      dispatch(hasAuthenticated(isAuthenticated))
+    }
+  }
+};
 
 class Signup extends Component {
   constructor(props) {
@@ -156,4 +166,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default connect(null, mapDispatchToProps)(Signup);

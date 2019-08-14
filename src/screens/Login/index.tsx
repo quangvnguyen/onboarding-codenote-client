@@ -1,10 +1,20 @@
 import React, { Component } from "react";
 import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import { Auth } from 'aws-amplify';
+import { connect } from 'react-redux';
 import LoaderButton from '../../components/LoaderButton';
+import { hasAuthenticated } from '../../actions';
 import "./index.css";
 
-export default class Login extends Component {
+const mapDispatchToProps = dispatch => {
+  return {
+    userHasAuthenticated: isAuthenticated => {
+      dispatch(hasAuthenticated(isAuthenticated))
+    }
+  }
+};
+
+class Login extends Component {
   constructor(props) {
     super(props);
 
@@ -74,3 +84,5 @@ export default class Login extends Component {
     );
   }
 }
+
+export default connect(null, mapDispatchToProps)(Login);
