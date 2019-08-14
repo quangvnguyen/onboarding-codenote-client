@@ -6,26 +6,19 @@ import {
 } from "react-bootstrap";
 import { Auth } from 'aws-amplify';
 import LoaderButton from '../../components/LoaderButton';
-import { LoginState, LoginProps } from './types';
+import { ILoginState, ILoginProps } from './types';
 import "./index.css";
 
-class Login extends Component<LoginProps, LoginState> {
-  constructor(props) {
-    super(props);
+class Login extends Component<ILoginProps, ILoginState> {
+  state = {
+    isLoading: false,
+    email: '',
+    password: '',
+  };
 
-    this.state = {
-      isLoading: false,
-      email: '',
-      password: '',
-    };
-  }
-
-  validateForm() {
+  validateForm = () => {
     const { email, password } = this.state;
-    return (
-      email.length > 0 &&
-      password.length > 0
-    );
+    return email.length > 0 && password.length > 0;
   }
 
   handleChange = name => (event) => {
@@ -63,18 +56,18 @@ class Login extends Component<LoginProps, LoginState> {
           <FormGroup controlId="loginEmail" bsSize="large">
             <ControlLabel>Email</ControlLabel>
             <FormControl
-            autoFocus
-            type="email"
-            value={email}
-            onChange={this.handleChange('email')}
+              autoFocus
+              type="email"
+              value={email}
+              onChange={this.handleChange('email')}
             />
           </FormGroup>
           <FormGroup controlId="loginPassword" bsSize="large">
             <ControlLabel>Password</ControlLabel>
             <FormControl
-            value={password}
-            onChange={this.handleChange('password')}
-            type="password"
+              value={password}
+              onChange={this.handleChange('password')}
+              type="password"
             />
           </FormGroup>
           <LoaderButton

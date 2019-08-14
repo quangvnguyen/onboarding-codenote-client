@@ -1,45 +1,42 @@
-import React, { Component } from "react";
-import { API } from "aws-amplify";
+import React, { Component } from 'react';
+import { API } from 'aws-amplify';
 import { FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
 import LoaderButton from '../../components/LoaderButton';
 import config from '../../config';
 import { s3Upload } from '../../libs/awsLib';
-import { NoteNewProps, NoteNewState } from './types';
+import { INoteNewProps, INoteNewState } from './types';
 import './index.css'; 
 
-class NoteNew extends Component<NoteNewProps, NoteNewState> {
-  constructor(props) {
-    super(props);
+class NoteNew extends Component<INoteNewProps, INoteNewState> {
+  file = null;
 
-    this.file = null;
-    this.state = {
-      isLoading: null,
-      note: {
-        attachment: null,
-      },
-      content: "",
-      attachmentURL: null
-    };
-  }
+  state = {
+    isLoading: null,
+    note: {
+      attachment: null,
+    },
+    content: "",
+    attachmentURL: null
+  };
 
-  createNote(note) {
+  createNote = (note) => {
     return API.post("notes", "/notes", {
       body: note
     });
   }
 
-  validateForm() {
+  validateForm = () => {
     const { content } = this.state;
     return content.length > 0;
   }
 
-  formatFilename(str) {
+  formatFilename = (str) => {
     return str.replace(/^\w+-/, "");
   }
 
-  handleChange = event => {
+  handleChange = name => event => {
     this.setState({
-      [event.target.id]: event.target.value
+      [name]: event.target.value
     });
   }
 
@@ -84,9 +81,9 @@ class NoteNew extends Component<NoteNewProps, NoteNewState> {
     return (
       <div className="NoteNew">
         <form onSubmit={this.handleSubmit}>
-          <FormGroup controlId="content">
+          <FormGroup controlId="newContent">
             <FormControl
-              onChange={this.handleChange}
+              onChange={this.handleChange('content')}
               value={content}
               componentClass="textarea"
             />
@@ -104,7 +101,7 @@ class NoteNew extends Component<NoteNewProps, NoteNewState> {
                 </a>
               </FormControl.Static>
             </FormGroup>}
-          <FormGroup controlId="file">
+          <FormGroup controlId="newFile">
             {!note.attachment &&
               <ControlLabel>Attachment</ControlLabel>}
             <FormControl onChange={this.handleFileChange} type="file" />

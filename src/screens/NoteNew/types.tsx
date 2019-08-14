@@ -1,8 +1,8 @@
-export interface NoteNewProps {
+export interface INoteNewProps {
   history: Object;
 }
 
-export interface NoteNewState {
+export interface INoteNewState {
   note: {
     attachment: string;
   };
