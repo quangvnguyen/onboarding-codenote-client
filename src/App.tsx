@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
-import logo from './logo.svg';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import './App.css';
 import ScreensRoot from './screens/Root';
+import { hasAuthenticated } from './actions';
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+  userHasAuthenticated: hasAuthenticated,
+}, dispatch);
 
 class App extends Component {
   constructor(props) {
@@ -16,7 +22,9 @@ class App extends Component {
 
   async componentDidMount() {
     try {
+      const { userHasAuthenticated } = this.props;
       await Auth.currentSession();
+      userHasAuthenticated(true);
     }
     catch (e) {
       if (e !== 'No current user') {
@@ -27,14 +35,11 @@ class App extends Component {
     this.setState({ isAuthenticating: false });
   }
 
-  handleLogout = async () => {
-    await Auth.signOut();
-    this.props.history.push('/login');
-  }
-
   render() {
+    const { isAuthenticating } = this.state;
+
     return (
-      !this.state.isAuthenticating &&
+      !isAuthenticating &&
       <div className="App container">
         <ScreensRoot />
       </div>
@@ -42,4 +47,4 @@ class App extends Component {
   }
 }
 
-export default withRouter(App);
+export default withRouter(connect(null, mapDispatchToProps)(App));
