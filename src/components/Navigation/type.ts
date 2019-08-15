@@ -1,8 +1,8 @@
 export interface INavigationProps {
-  userHasAuthenticated: Function;
+  userHasAuthenticated: (isAuthenticated: boolean) => void;
   isAuthenticated: boolean;
   history: {
-    push: Function;
+    push: (url: string) => void;
   };
 }
 

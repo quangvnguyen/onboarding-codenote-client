@@ -1,6 +1,6 @@
 export interface INewNoteProps {
   history: {
-    push: Function;
+    push: (url: string) => void;
   };
 }
 

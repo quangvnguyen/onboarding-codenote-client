@@ -1,8 +1,8 @@
 export interface IAppProps {
   history: {
-    push: Function;
+    push: (url: string) => void;
   };
-  userHasAuthenticated: Function;
+  userHasAuthenticated: (isAuthenticated: boolean) => void;
 }
 
 export interface IAppStates {

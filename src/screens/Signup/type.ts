@@ -10,9 +10,9 @@ export interface ISignupStates {
 }
 
 export interface ISignupProps {
-  userHasAuthenticated: Function;
+  userHasAuthenticated: (isAuthenticated: boolean) => void;
   history: {
-    push: Function;
+    push: (url: string) => void;
   }
 }
 

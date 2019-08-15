@@ -1,10 +1,10 @@
 import { INote } from '../../type';
 
 export interface IHomeProps {
-  userHasAuthenticated: Function;
+  userHasAuthenticated: (isAuthenticated: boolean) => void;
   isAuthenticated: boolean;
   history: {
-    push: Function;
+    push: (url: string) => void;
   };
 }
 

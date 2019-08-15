@@ -1,5 +1,5 @@
 export interface ILoginProps {
-  userHasAuthenticated(isAuthenticated: boolean): Function;
+  userHasAuthenticated: (isAuthenticated: boolean) => void;
 }
 
 export interface ILoginStates {
