@@ -5,8 +5,11 @@ import './index.css';
 import LoaderButton from '../../components/LoaderButton';
 import config from '../../config';
 import { s3Upload } from '../../libs/awsLib';
+import { INoteDetailProps, INoteDetailStates } from './type';
 
-class NoteDetail extends Component {
+class NoteDetail extends Component<INoteDetailProps, INoteDetailStates> {
+  file: File;
+  
   constructor(props) {
     super(props);
 
@@ -42,7 +45,7 @@ class NoteDetail extends Component {
   }
 
   getNote() {
-    return API.get("notes", `/notes/${this.props.match.params.id}`);
+    return API.get("notes", `/notes/${this.props.match.params.id}`, {});
   }
 
   saveNote(note) {
@@ -52,7 +55,7 @@ class NoteDetail extends Component {
   }
 
   deleteNote() {
-    return API.del('notes', `/notes/${this.props.match.params.id}`);
+    return API.del('notes', `/notes/${this.props.match.params.id}`, {});
   }
 
   validateForm() {
@@ -66,7 +69,7 @@ class NoteDetail extends Component {
   handleChange = event => {
     this.setState({
       [event.target.id]: event.target.value
-    });
+    } as Pick<INoteDetailStates, keyof INoteDetailStates>);
   }
 
   handleFileChange = event => {

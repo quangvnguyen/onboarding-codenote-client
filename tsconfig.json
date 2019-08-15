@@ -20,8 +20,5 @@
     "noEmit": true,
     "jsx": "preserve"
   },
-  "include": [
-    "src/screens/Login",
-    "src/screens/NewNote",
-  ]
+  "include": ["src"]
 }

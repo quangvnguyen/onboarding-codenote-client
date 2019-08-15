@@ -5,9 +5,11 @@ import { bindActionCreators } from 'redux';
 import { PageHeader, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { userHasAuthenticated } from '../../actions/authenticate';
+import { INote } from '../../type';
+import { IHomeProps, IHomeStates } from './type';
 import "./index.css";
 
-class Home extends Component {
+class Home extends Component<IHomeProps, IHomeStates> {
   constructor(props) {
     super(props);
 
@@ -33,12 +35,12 @@ class Home extends Component {
   }
 
   notes() {
-    return API.get("notes", "/notes");
+    return API.get("notes", "/notes", {});
   }
 
   renderNotesList(notes) {
     return [{}].concat(notes).map(
-      (note, i) =>
+      (note: INote, i) =>
         i !== 0
           ? <LinkContainer
               key={note.noteId}
