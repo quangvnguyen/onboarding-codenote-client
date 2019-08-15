@@ -2,17 +2,14 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import './App.css';
 import ScreensRoot from './screens/Root';
 import { hasAuthenticated } from './actions';
 
-const mapDispatchToProps = dispatch => {
-  return {
-    userHasAuthenticated: isAuthenticated => {
-      dispatch(hasAuthenticated(isAuthenticated))
-    }
-  }
-};
+const mapDispatchToProps = dispatch => bindActionCreators({
+  userHasAuthenticated: hasAuthenticated,
+}, dispatch);
 
 class App extends Component {
   constructor(props) {

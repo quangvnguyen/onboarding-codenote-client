@@ -2,17 +2,14 @@ import React, { Component } from "react";
 import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import { Auth } from 'aws-amplify';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import LoaderButton from '../../components/LoaderButton';
 import { hasAuthenticated } from '../../actions';
 import "./index.css";
 
-const mapDispatchToProps = dispatch => {
-  return {
-    userHasAuthenticated: isAuthenticated => {
-      dispatch(hasAuthenticated(isAuthenticated))
-    }
-  }
-};
+const mapDispatchToProps = dispatch => bindActionCreators({
+  userHasAuthenticated: hasAuthenticated,
+}, dispatch);
 
 class Login extends Component {
   constructor(props) {

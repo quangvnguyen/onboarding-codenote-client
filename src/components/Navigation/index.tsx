@@ -4,6 +4,7 @@ import { Auth } from 'aws-amplify';
 import { connect } from 'react-redux';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import { bindActionCreators } from 'redux';
 import { hasAuthenticated } from '../../actions';
 
 const mapStateToProps = (state) => {
@@ -12,13 +13,9 @@ const mapStateToProps = (state) => {
   }
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    userHasAuthenticated: isAuthenticated => {
-      dispatch(hasAuthenticated(isAuthenticated))
-    }
-  }
-};
+const mapDispatchToProps = dispatch => bindActionCreators({
+  userHasAuthenticated: hasAuthenticated,
+}, dispatch);
 
 class Navigation extends React.Component {
   handleLogout = async () => {
