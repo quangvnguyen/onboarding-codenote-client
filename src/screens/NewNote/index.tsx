@@ -4,9 +4,12 @@ import { API } from 'aws-amplify';
 import LoaderButton from "../../components/LoaderButton";
 import { s3Upload } from '../../libs/awsLib'
 import config from "../../config";
+import { INewNoteProps, INewNoteStates } from './type';
 import "./index.css";
 
-export default class NewNote extends Component {
+export default class NewNote extends Component<INewNoteProps, INewNoteStates> {
+  file: File;
+
   constructor(props) {
     super(props);
 
@@ -25,7 +28,7 @@ export default class NewNote extends Component {
   handleChange = event => {
     this.setState({
       [event.target.id]: event.target.value
-    });
+    } as Pick<INewNoteStates, keyof INewNoteStates>);
   }
 
   handleFileChange = event => {

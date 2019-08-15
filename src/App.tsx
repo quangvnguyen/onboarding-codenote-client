@@ -7,8 +7,9 @@ import logo from './logo.svg';
 import './App.css';
 import { userHasAuthenticated } from './actions/authenticate';
 import ScreensRoot from './screens/Root';
+import { IAppProps, IAppStates } from './type';
 
-class App extends Component {
+class App extends Component<IAppProps, IAppStates> {
   constructor(props) {
     super(props);
 

@@ -6,8 +6,9 @@ import { Auth } from 'aws-amplify';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { userHasAuthenticated } from '../../actions/authenticate';
+import { INavigationProps, INavigationStates } from './type';
 
-class Navigation extends React.Component {
+class Navigation extends React.Component<INavigationProps, INavigationStates> {
   handleLogout = async () => {
     await Auth.signOut();
     this.props.userHasAuthenticated(false);

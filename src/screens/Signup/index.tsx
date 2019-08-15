@@ -7,9 +7,10 @@ import {
 } from "react-bootstrap";
 import { Auth } from 'aws-amplify';
 import LoaderButton from '../../components/LoaderButton';
+import { ISignupProps, ISignupStates, IUser } from './type';
 import "./index.css";
 
-class Signup extends Component {
+class Signup extends Component<ISignupProps, ISignupStates> {
   constructor(props) {
     super(props);
 
@@ -38,7 +39,7 @@ class Signup extends Component {
   handleChange = event => {
     this.setState({
       [event.target.id]: event.target.value
-    });
+    } as Pick<ISignupStates, keyof ISignupStates>);
   }
 
   handleSubmit = async event => {
@@ -50,10 +51,10 @@ class Signup extends Component {
       const newUser = await Auth.signUp({
         username: this.state.email,
         password: this.state.password
-      });
+      } as IUser);
       this.setState({
         newUser
-      });
+      } as Pick<ISignupStates, 'newUser'>);
     } catch (e) {
       alert(e.message);
     }

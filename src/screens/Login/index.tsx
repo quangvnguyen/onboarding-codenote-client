@@ -5,9 +5,10 @@ import { bindActionCreators } from 'redux';
 import { Auth } from 'aws-amplify';
 import LoaderButton from '../../components/LoaderButton';
 import { userHasAuthenticated } from '../../actions/authenticate';
+import { ILoginProps, ILoginStates } from './type';
 import "./index.css";
 
-class Login extends Component {
+class Login extends Component<ILoginProps, ILoginStates> {
   constructor(props) {
     super(props);
 
@@ -25,7 +26,7 @@ class Login extends Component {
   handleChange = event => {
     this.setState({
       [event.target.id]: event.target.value
-    });
+    } as Pick<ILoginStates, keyof ILoginStates>);
   }
 
   handleSubmit = async event => {
