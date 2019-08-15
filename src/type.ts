@@ -1,7 +1,7 @@
+import * as H from 'history';
+
 export interface IAppProps {
-  history: {
-    push: (url: string) => void;
-  };
+  history: H.History;
   userHasAuthenticated: (isAuthenticated: boolean) => void;
 }
 

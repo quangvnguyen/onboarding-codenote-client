@@ -1,11 +1,10 @@
+import * as H from 'history';
 import { INote } from '../../type';
 
 export interface IHomeProps {
   userHasAuthenticated: (isAuthenticated: boolean) => void;
   isAuthenticated: boolean;
-  history: {
-    push: (url: string) => void;
-  };
+  history: H.History;
 }
 
 export interface IHomeStates {

@@ -1,11 +1,10 @@
+import * as H from 'history';
 import { INote } from '../../type';
 
 export interface INoteDetailProps {
   userHasAuthenticated: (isAuthenticated: boolean) => void;
   isAuthenticated: boolean;
-  history: {
-    push: (url: string) => void;
-  };
+  history: H.History;
   match: {
     params: {
       id: string;

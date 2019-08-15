@@ -1,4 +1,5 @@
-import { ISignUpResult } from "amazon-cognito-identity-js";
+import { ISignUpResult } from 'amazon-cognito-identity-js';
+import * as H from 'history';
 
 export interface ISignupStates {
   password: string;
@@ -11,9 +12,7 @@ export interface ISignupStates {
 
 export interface ISignupProps {
   userHasAuthenticated: (isAuthenticated: boolean) => void;
-  history: {
-    push: (url: string) => void;
-  }
+  history: H.History;
 }
 
 export interface IUser {

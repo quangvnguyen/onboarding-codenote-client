@@ -1,7 +1,7 @@
+import * as H from 'history';
+
 export interface INewNoteProps {
-  history: {
-    push: (url: string) => void;
-  };
+  history: H.History;
 }
 
 export interface INewNoteStates {
