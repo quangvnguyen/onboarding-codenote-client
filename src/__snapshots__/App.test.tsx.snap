@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders with isAuthenticating 1`] = `
+<div
+  className="App container"
+>
+  <ScreensRoot />
+</div>
+`;
+
 exports[`renders without crashing 1`] = `
 <Route>
   <Component />

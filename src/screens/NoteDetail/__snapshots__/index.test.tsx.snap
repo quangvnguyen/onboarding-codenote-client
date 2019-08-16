@@ -1,0 +1,383 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Note Detail component renders when handleDelete function called 1`] = `
+<div
+  className="NoteDetail"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <FormGroup
+      bsClass="form-group"
+      controlId="content"
+    >
+      <FormControl
+        bsClass="form-control"
+        componentClass="textarea"
+        onChange={[Function]}
+        value="content"
+      />
+    </FormGroup>
+    <FormGroup
+      bsClass="form-group"
+    >
+      <ControlLabel
+        bsClass="control-label"
+        srOnly={false}
+      >
+        Attachment
+      </ControlLabel>
+      <FormControlStatic
+        bsClass="form-control-static"
+        componentClass="p"
+      >
+        <a
+          href=""
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          attachment
+        </a>
+      </FormControlStatic>
+    </FormGroup>
+    <FormGroup
+      bsClass="form-group"
+      controlId="file"
+    >
+      <FormControl
+        bsClass="form-control"
+        componentClass="input"
+        onChange={[Function]}
+        type="file"
+      />
+    </FormGroup>
+    <LoaderButton
+      block={true}
+      bsSize="large"
+      bsStyle="primary"
+      disabled={false}
+      isLoading={false}
+      loadingText="Saving…"
+      text="Save"
+      type="submit"
+    />
+    <LoaderButton
+      block={true}
+      bsSize="large"
+      bsStyle="danger"
+      isLoading={false}
+      loadingText="Deleting…"
+      onClick={[Function]}
+      text="Delete"
+    />
+  </form>
+</div>
+`;
+
+exports[`Note Detail component renders when handleSubmit function called 1`] = `
+<div
+  className="NoteDetail"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <FormGroup
+      bsClass="form-group"
+      controlId="content"
+    >
+      <FormControl
+        bsClass="form-control"
+        componentClass="textarea"
+        onChange={[Function]}
+        value="content"
+      />
+    </FormGroup>
+    <FormGroup
+      bsClass="form-group"
+    >
+      <ControlLabel
+        bsClass="control-label"
+        srOnly={false}
+      >
+        Attachment
+      </ControlLabel>
+      <FormControlStatic
+        bsClass="form-control-static"
+        componentClass="p"
+      >
+        <a
+          href=""
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          attachment
+        </a>
+      </FormControlStatic>
+    </FormGroup>
+    <FormGroup
+      bsClass="form-group"
+      controlId="file"
+    >
+      <FormControl
+        bsClass="form-control"
+        componentClass="input"
+        onChange={[Function]}
+        type="file"
+      />
+    </FormGroup>
+    <LoaderButton
+      block={true}
+      bsSize="large"
+      bsStyle="primary"
+      disabled={false}
+      isLoading={false}
+      loadingText="Saving…"
+      text="Save"
+      type="submit"
+    />
+    <LoaderButton
+      block={true}
+      bsSize="large"
+      bsStyle="danger"
+      isLoading={false}
+      loadingText="Deleting…"
+      onClick={[Function]}
+      text="Delete"
+    />
+  </form>
+</div>
+`;
+
+exports[`Note Detail component renders when submit with file bigger than MAX_ATTACHMENT_SIZE 1`] = `
+<NoteDetail
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <div
+    className="NoteDetail"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <FormGroup
+        bsClass="form-group"
+        controlId="content"
+      >
+        <div
+          className="form-group"
+        >
+          <FormControl
+            bsClass="form-control"
+            componentClass="textarea"
+            onChange={[Function]}
+            value="content"
+          >
+            <textarea
+              className="form-control"
+              id="content"
+              onChange={[Function]}
+              value="content"
+            />
+          </FormControl>
+        </div>
+      </FormGroup>
+      <FormGroup
+        bsClass="form-group"
+      >
+        <div
+          className="form-group"
+        >
+          <ControlLabel
+            bsClass="control-label"
+            srOnly={false}
+          >
+            <label
+              className="control-label"
+            >
+              Attachment
+            </label>
+          </ControlLabel>
+          <FormControlStatic
+            bsClass="form-control-static"
+            componentClass="p"
+          >
+            <p
+              className="form-control-static"
+            >
+              <a
+                href=""
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                attachment
+              </a>
+            </p>
+          </FormControlStatic>
+        </div>
+      </FormGroup>
+      <FormGroup
+        bsClass="form-group"
+        controlId="file"
+      >
+        <div
+          className="form-group"
+        >
+          <FormControl
+            bsClass="form-control"
+            componentClass="input"
+            onChange={[Function]}
+            type="file"
+          >
+            <input
+              className=""
+              id="file"
+              onChange={[Function]}
+              type="file"
+            />
+          </FormControl>
+        </div>
+      </FormGroup>
+      <LoaderButton
+        block={true}
+        bsSize="large"
+        bsStyle="primary"
+        disabled={false}
+        isLoading={false}
+        loadingText="Saving…"
+        text="Save"
+        type="submit"
+      >
+        <Button
+          active={false}
+          block={true}
+          bsClass="btn"
+          bsSize="large"
+          bsStyle="primary"
+          className="LoaderButton "
+          disabled={false}
+          type="submit"
+        >
+          <button
+            className="LoaderButton  btn btn-lg btn-primary btn-block"
+            disabled={false}
+            type="submit"
+          >
+            Save
+          </button>
+        </Button>
+      </LoaderButton>
+      <LoaderButton
+        block={true}
+        bsSize="large"
+        bsStyle="danger"
+        isLoading={false}
+        loadingText="Deleting…"
+        onClick={[Function]}
+        text="Delete"
+      >
+        <Button
+          active={false}
+          block={true}
+          bsClass="btn"
+          bsSize="large"
+          bsStyle="danger"
+          className="LoaderButton "
+          disabled={false}
+          onClick={[Function]}
+        >
+          <button
+            className="LoaderButton  btn btn-lg btn-danger btn-block"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Delete
+          </button>
+        </Button>
+      </LoaderButton>
+    </form>
+  </div>
+</NoteDetail>
+`;
+
+exports[`Note Detail component renders without crashing 1`] = `
+<div
+  className="NoteDetail"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <FormGroup
+      bsClass="form-group"
+      controlId="content"
+    >
+      <FormControl
+        bsClass="form-control"
+        componentClass="textarea"
+        onChange={[Function]}
+        value="content"
+      />
+    </FormGroup>
+    <FormGroup
+      bsClass="form-group"
+    >
+      <ControlLabel
+        bsClass="control-label"
+        srOnly={false}
+      >
+        Attachment
+      </ControlLabel>
+      <FormControlStatic
+        bsClass="form-control-static"
+        componentClass="p"
+      >
+        <a
+          href=""
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          attachment
+        </a>
+      </FormControlStatic>
+    </FormGroup>
+    <FormGroup
+      bsClass="form-group"
+      controlId="file"
+    >
+      <FormControl
+        bsClass="form-control"
+        componentClass="input"
+        onChange={[Function]}
+        type="file"
+      />
+    </FormGroup>
+    <LoaderButton
+      block={true}
+      bsSize="large"
+      bsStyle="primary"
+      disabled={false}
+      isLoading={false}
+      loadingText="Saving…"
+      text="Save"
+      type="submit"
+    />
+    <LoaderButton
+      block={true}
+      bsSize="large"
+      bsStyle="danger"
+      isLoading={false}
+      loadingText="Deleting…"
+      onClick={[Function]}
+      text="Delete"
+    />
+  </form>
+</div>
+`;

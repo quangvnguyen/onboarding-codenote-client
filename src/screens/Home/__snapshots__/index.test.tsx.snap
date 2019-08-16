@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component renders with authenticate 1`] = `
+<Connect(Home)
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Home
+    isAuthenticated={true}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+    storeSubscription={
+      Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
+      }
+    }
+    userHasAuthenticated={[Function]}
+  >
+    <div
+      className="Home"
+    >
+      <div
+        className="notes"
+      >
+        <PageHeader
+          bsClass="page-header"
+        >
+          <div
+            className="page-header"
+          >
+            <h1>
+              All notes
+            </h1>
+          </div>
+        </PageHeader>
+        <ListGroup
+          bsClass="list-group"
+        >
+          <div
+            className="list-group"
+          />
+        </ListGroup>
+      </div>
+    </div>
+  </Home>
+</Connect(Home)>
+`;
+
+exports[`Home component renders without authenticate 1`] = `
+<Connect(Home)
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Home
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+    storeSubscription={
+      Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
+      }
+    }
+    userHasAuthenticated={[Function]}
+  >
+    <div
+      className="Home"
+    >
+      <div
+        className="lander"
+      >
+        <h1>
+          CodeNote
+        </h1>
+        <p>
+          A simple note taking app by me
+        </p>
+      </div>
+    </div>
+  </Home>
+</Connect(Home)>
+`;

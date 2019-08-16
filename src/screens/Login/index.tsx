@@ -17,7 +17,7 @@ interface IProps {
   userHasAuthenticated: (boolean) => void,
 }
 
-class Login extends Component<IProps, IStates> {
+export class Login extends Component<IProps, IStates> {
   constructor(props: IProps) {
     super(props);
 
