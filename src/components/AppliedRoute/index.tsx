@@ -7,7 +7,7 @@ interface IProps {
   [index: string]: any,
 }
 
-const AppliedRoute = ({ component: C, props: cProps, ...rest }: IProps) =>
+export const AppliedRoute = ({ component: C, props: cProps, ...rest }: IProps) =>
   <Route {...rest} render={ props => <C {...props} {...cProps} /> } />;
 
 export default AppliedRoute;

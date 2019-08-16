@@ -1,0 +1,703 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signup Component renders confirm form 1`] = `
+<Signup
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <div
+    className="Signup"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <FormGroup
+        bsClass="form-group"
+        bsSize="large"
+        controlId="confirmationCode"
+      >
+        <div
+          className="form-group form-group-lg"
+        >
+          <ControlLabel
+            bsClass="control-label"
+            srOnly={false}
+          >
+            <label
+              className="control-label"
+              htmlFor="confirmationCode"
+            >
+              Confirmation Code
+            </label>
+          </ControlLabel>
+          <FormControl
+            autoFocus={true}
+            bsClass="form-control"
+            componentClass="input"
+            onChange={[Function]}
+            type="tel"
+            value=""
+          >
+            <input
+              autoFocus={true}
+              className="form-control"
+              id="confirmationCode"
+              onChange={[Function]}
+              type="tel"
+              value=""
+            />
+          </FormControl>
+          <HelpBlock
+            bsClass="help-block"
+          >
+            <span
+              className="help-block"
+            >
+              Please check your email for the code.
+            </span>
+          </HelpBlock>
+        </div>
+      </FormGroup>
+      <LoaderButton
+        block={true}
+        bsSize="large"
+        disabled={true}
+        isLoading={false}
+        loadingText="Verifying…"
+        text="Verify"
+        type="submit"
+      >
+        <Button
+          active={false}
+          block={true}
+          bsClass="btn"
+          bsSize="large"
+          bsStyle="default"
+          className="LoaderButton "
+          disabled={true}
+          type="submit"
+        >
+          <button
+            className="LoaderButton  btn btn-lg btn-default btn-block"
+            disabled={true}
+            type="submit"
+          >
+            Verify
+          </button>
+        </Button>
+      </LoaderButton>
+    </form>
+  </div>
+</Signup>
+`;
+
+exports[`Signup Component renders when form validated 1`] = `
+<Signup
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <div
+    className="Signup"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <FormGroup
+        bsClass="form-group"
+        bsSize="large"
+        controlId="email"
+      >
+        <div
+          className="form-group form-group-lg"
+        >
+          <ControlLabel
+            bsClass="control-label"
+            srOnly={false}
+          >
+            <label
+              className="control-label"
+              htmlFor="email"
+            >
+              Email
+            </label>
+          </ControlLabel>
+          <FormControl
+            autoFocus={true}
+            bsClass="form-control"
+            componentClass="input"
+            onChange={[Function]}
+            type="email"
+            value="email@example.com"
+          >
+            <input
+              autoFocus={true}
+              className="form-control"
+              id="email"
+              onChange={[Function]}
+              type="email"
+              value="email@example.com"
+            />
+          </FormControl>
+        </div>
+      </FormGroup>
+      <FormGroup
+        bsClass="form-group"
+        bsSize="large"
+        controlId="password"
+      >
+        <div
+          className="form-group form-group-lg"
+        >
+          <ControlLabel
+            bsClass="control-label"
+            srOnly={false}
+          >
+            <label
+              className="control-label"
+              htmlFor="password"
+            >
+              Password
+            </label>
+          </ControlLabel>
+          <FormControl
+            bsClass="form-control"
+            componentClass="input"
+            onChange={[Function]}
+            type="password"
+            value="password"
+          >
+            <input
+              className="form-control"
+              id="password"
+              onChange={[Function]}
+              type="password"
+              value="password"
+            />
+          </FormControl>
+        </div>
+      </FormGroup>
+      <FormGroup
+        bsClass="form-group"
+        bsSize="large"
+        controlId="confirmPassword"
+      >
+        <div
+          className="form-group form-group-lg"
+        >
+          <ControlLabel
+            bsClass="control-label"
+            srOnly={false}
+          >
+            <label
+              className="control-label"
+              htmlFor="confirmPassword"
+            >
+              Confirm Password
+            </label>
+          </ControlLabel>
+          <FormControl
+            bsClass="form-control"
+            componentClass="input"
+            onChange={[Function]}
+            type="password"
+            value="password"
+          >
+            <input
+              className="form-control"
+              id="confirmPassword"
+              onChange={[Function]}
+              type="password"
+              value="password"
+            />
+          </FormControl>
+        </div>
+      </FormGroup>
+      <LoaderButton
+        block={true}
+        bsSize="large"
+        disabled={false}
+        isLoading={false}
+        loadingText="Signing up…"
+        text="Signup"
+        type="submit"
+      >
+        <Button
+          active={false}
+          block={true}
+          bsClass="btn"
+          bsSize="large"
+          bsStyle="default"
+          className="LoaderButton "
+          disabled={false}
+          type="submit"
+        >
+          <button
+            className="LoaderButton  btn btn-lg btn-default btn-block"
+            disabled={false}
+            type="submit"
+          >
+            Signup
+          </button>
+        </Button>
+      </LoaderButton>
+    </form>
+  </div>
+</Signup>
+`;
+
+exports[`Signup Component renders when handleSubmit function called 1`] = `
+<Signup
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <div
+    className="Signup"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <FormGroup
+        bsClass="form-group"
+        bsSize="large"
+        controlId="email"
+      >
+        <div
+          className="form-group form-group-lg"
+        >
+          <ControlLabel
+            bsClass="control-label"
+            srOnly={false}
+          >
+            <label
+              className="control-label"
+              htmlFor="email"
+            >
+              Email
+            </label>
+          </ControlLabel>
+          <FormControl
+            autoFocus={true}
+            bsClass="form-control"
+            componentClass="input"
+            onChange={[Function]}
+            type="email"
+            value=""
+          >
+            <input
+              autoFocus={true}
+              className="form-control"
+              id="email"
+              onChange={[Function]}
+              type="email"
+              value=""
+            />
+          </FormControl>
+        </div>
+      </FormGroup>
+      <FormGroup
+        bsClass="form-group"
+        bsSize="large"
+        controlId="password"
+      >
+        <div
+          className="form-group form-group-lg"
+        >
+          <ControlLabel
+            bsClass="control-label"
+            srOnly={false}
+          >
+            <label
+              className="control-label"
+              htmlFor="password"
+            >
+              Password
+            </label>
+          </ControlLabel>
+          <FormControl
+            bsClass="form-control"
+            componentClass="input"
+            onChange={[Function]}
+            type="password"
+            value=""
+          >
+            <input
+              className="form-control"
+              id="password"
+              onChange={[Function]}
+              type="password"
+              value=""
+            />
+          </FormControl>
+        </div>
+      </FormGroup>
+      <FormGroup
+        bsClass="form-group"
+        bsSize="large"
+        controlId="confirmPassword"
+      >
+        <div
+          className="form-group form-group-lg"
+        >
+          <ControlLabel
+            bsClass="control-label"
+            srOnly={false}
+          >
+            <label
+              className="control-label"
+              htmlFor="confirmPassword"
+            >
+              Confirm Password
+            </label>
+          </ControlLabel>
+          <FormControl
+            bsClass="form-control"
+            componentClass="input"
+            onChange={[Function]}
+            type="password"
+            value=""
+          >
+            <input
+              className="form-control"
+              id="confirmPassword"
+              onChange={[Function]}
+              type="password"
+              value=""
+            />
+          </FormControl>
+        </div>
+      </FormGroup>
+      <LoaderButton
+        block={true}
+        bsSize="large"
+        disabled={true}
+        isLoading={true}
+        loadingText="Signing up…"
+        text="Signup"
+        type="submit"
+      >
+        <Button
+          active={false}
+          block={true}
+          bsClass="btn"
+          bsSize="large"
+          bsStyle="default"
+          className="LoaderButton "
+          disabled={true}
+          type="submit"
+        >
+          <button
+            className="LoaderButton  btn btn-lg btn-default btn-block"
+            disabled={true}
+            type="submit"
+          >
+            <Glyphicon
+              bsClass="glyphicon"
+              className="spinning"
+              glyph="refresh"
+            >
+              <span
+                className="spinning glyphicon glyphicon-refresh"
+              />
+            </Glyphicon>
+            Signing up…
+          </button>
+        </Button>
+      </LoaderButton>
+    </form>
+  </div>
+</Signup>
+`;
+
+exports[`Signup Component renders when handleSubmit function in confirm form called 1`] = `
+<Signup
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <div
+    className="Signup"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <FormGroup
+        bsClass="form-group"
+        bsSize="large"
+        controlId="confirmationCode"
+      >
+        <div
+          className="form-group form-group-lg"
+        >
+          <ControlLabel
+            bsClass="control-label"
+            srOnly={false}
+          >
+            <label
+              className="control-label"
+              htmlFor="confirmationCode"
+            >
+              Confirmation Code
+            </label>
+          </ControlLabel>
+          <FormControl
+            autoFocus={true}
+            bsClass="form-control"
+            componentClass="input"
+            onChange={[Function]}
+            type="tel"
+            value=""
+          >
+            <input
+              autoFocus={true}
+              className="form-control"
+              id="confirmationCode"
+              onChange={[Function]}
+              type="tel"
+              value=""
+            />
+          </FormControl>
+          <HelpBlock
+            bsClass="help-block"
+          >
+            <span
+              className="help-block"
+            >
+              Please check your email for the code.
+            </span>
+          </HelpBlock>
+        </div>
+      </FormGroup>
+      <LoaderButton
+        block={true}
+        bsSize="large"
+        disabled={true}
+        isLoading={true}
+        loadingText="Verifying…"
+        text="Verify"
+        type="submit"
+      >
+        <Button
+          active={false}
+          block={true}
+          bsClass="btn"
+          bsSize="large"
+          bsStyle="default"
+          className="LoaderButton "
+          disabled={true}
+          type="submit"
+        >
+          <button
+            className="LoaderButton  btn btn-lg btn-default btn-block"
+            disabled={true}
+            type="submit"
+          >
+            <Glyphicon
+              bsClass="glyphicon"
+              className="spinning"
+              glyph="refresh"
+            >
+              <span
+                className="spinning glyphicon glyphicon-refresh"
+              />
+            </Glyphicon>
+            Verifying…
+          </button>
+        </Button>
+      </LoaderButton>
+    </form>
+  </div>
+</Signup>
+`;
+
+exports[`Signup Component renders without crashing 1`] = `
+<Signup
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <div
+    className="Signup"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <FormGroup
+        bsClass="form-group"
+        bsSize="large"
+        controlId="email"
+      >
+        <div
+          className="form-group form-group-lg"
+        >
+          <ControlLabel
+            bsClass="control-label"
+            srOnly={false}
+          >
+            <label
+              className="control-label"
+              htmlFor="email"
+            >
+              Email
+            </label>
+          </ControlLabel>
+          <FormControl
+            autoFocus={true}
+            bsClass="form-control"
+            componentClass="input"
+            onChange={[Function]}
+            type="email"
+            value=""
+          >
+            <input
+              autoFocus={true}
+              className="form-control"
+              id="email"
+              onChange={[Function]}
+              type="email"
+              value=""
+            />
+          </FormControl>
+        </div>
+      </FormGroup>
+      <FormGroup
+        bsClass="form-group"
+        bsSize="large"
+        controlId="password"
+      >
+        <div
+          className="form-group form-group-lg"
+        >
+          <ControlLabel
+            bsClass="control-label"
+            srOnly={false}
+          >
+            <label
+              className="control-label"
+              htmlFor="password"
+            >
+              Password
+            </label>
+          </ControlLabel>
+          <FormControl
+            bsClass="form-control"
+            componentClass="input"
+            onChange={[Function]}
+            type="password"
+            value=""
+          >
+            <input
+              className="form-control"
+              id="password"
+              onChange={[Function]}
+              type="password"
+              value=""
+            />
+          </FormControl>
+        </div>
+      </FormGroup>
+      <FormGroup
+        bsClass="form-group"
+        bsSize="large"
+        controlId="confirmPassword"
+      >
+        <div
+          className="form-group form-group-lg"
+        >
+          <ControlLabel
+            bsClass="control-label"
+            srOnly={false}
+          >
+            <label
+              className="control-label"
+              htmlFor="confirmPassword"
+            >
+              Confirm Password
+            </label>
+          </ControlLabel>
+          <FormControl
+            bsClass="form-control"
+            componentClass="input"
+            onChange={[Function]}
+            type="password"
+            value=""
+          >
+            <input
+              className="form-control"
+              id="confirmPassword"
+              onChange={[Function]}
+              type="password"
+              value=""
+            />
+          </FormControl>
+        </div>
+      </FormGroup>
+      <LoaderButton
+        block={true}
+        bsSize="large"
+        disabled={true}
+        isLoading={false}
+        loadingText="Signing up…"
+        text="Signup"
+        type="submit"
+      >
+        <Button
+          active={false}
+          block={true}
+          bsClass="btn"
+          bsSize="large"
+          bsStyle="default"
+          className="LoaderButton "
+          disabled={true}
+          type="submit"
+        >
+          <button
+            className="LoaderButton  btn btn-lg btn-default btn-block"
+            disabled={true}
+            type="submit"
+          >
+            Signup
+          </button>
+        </Button>
+      </LoaderButton>
+    </form>
+  </div>
+</Signup>
+`;

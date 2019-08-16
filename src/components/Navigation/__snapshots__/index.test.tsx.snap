@@ -1,0 +1,509 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation component renders with authenticated 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Connect(Navigation)
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+    >
+      <Navigation
+        isAuthenticated={true}
+        store={
+          Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          }
+        }
+        storeSubscription={
+          Subscription {
+            "listeners": Object {
+              "clear": [Function],
+              "get": [Function],
+              "notify": [Function],
+              "subscribe": [Function],
+            },
+            "onStateChange": [Function],
+            "parentSub": undefined,
+            "store": Object {
+              "clearActions": [Function],
+              "dispatch": [Function],
+              "getActions": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            },
+            "unsubscribe": [Function],
+          }
+        }
+        userHasAuthenticated={[Function]}
+      >
+        <Uncontrolled(Navbar)
+          bsStyle="default"
+          collapseOnSelect={true}
+          fluid={true}
+        >
+          <Navbar
+            bsClass="navbar"
+            bsStyle="default"
+            collapseOnSelect={true}
+            componentClass="nav"
+            fixedBottom={false}
+            fixedTop={false}
+            fluid={true}
+            inverse={false}
+            onToggle={[Function]}
+            staticTop={false}
+          >
+            <nav
+              className="navbar navbar-default"
+            >
+              <Grid
+                bsClass="container"
+                componentClass="div"
+                fluid={true}
+              >
+                <div
+                  className="container-fluid"
+                >
+                  <NavbarHeader>
+                    <div
+                      className="navbar-header"
+                    >
+                      <NavbarBrand>
+                        <Link
+                          className="navbar-brand"
+                          replace={false}
+                          to="/"
+                        >
+                          <a
+                            className="navbar-brand"
+                            href="/"
+                            onClick={[Function]}
+                          >
+                            CodeNote
+                          </a>
+                        </Link>
+                      </NavbarBrand>
+                      <NavbarToggle>
+                        <button
+                          className="navbar-toggle collapsed"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          <span
+                            className="sr-only"
+                          >
+                            Toggle navigation
+                          </span>
+                          <span
+                            className="icon-bar"
+                          />
+                          <span
+                            className="icon-bar"
+                          />
+                          <span
+                            className="icon-bar"
+                          />
+                        </button>
+                      </NavbarToggle>
+                    </div>
+                  </NavbarHeader>
+                  <NavbarCollapse>
+                    <Collapse
+                      appear={false}
+                      dimension="height"
+                      getDimensionValue={[Function]}
+                      in={false}
+                      mountOnEnter={false}
+                      timeout={300}
+                      unmountOnExit={false}
+                    >
+                      <Transition
+                        appear={false}
+                        aria-expanded={null}
+                        enter={true}
+                        exit={true}
+                        in={false}
+                        mountOnEnter={false}
+                        onEnter={[Function]}
+                        onEntered={[Function]}
+                        onEntering={[Function]}
+                        onExit={[Function]}
+                        onExited={[Function]}
+                        onExiting={[Function]}
+                        timeout={300}
+                        unmountOnExit={false}
+                      >
+                        <div
+                          aria-expanded={null}
+                          className="navbar-collapse collapse"
+                        >
+                          <Nav
+                            bsClass="nav"
+                            justified={false}
+                            pullLeft={false}
+                            pullRight={true}
+                            stacked={false}
+                          >
+                            <ul
+                              className="nav navbar-nav navbar-right"
+                              role={null}
+                            >
+                              <NavItem
+                                active={false}
+                                disabled={false}
+                                key=".0"
+                                onClick={[Function]}
+                                onSelect={[Function]}
+                              >
+                                <li
+                                  className=""
+                                  role="presentation"
+                                >
+                                  <SafeAnchor
+                                    componentClass="a"
+                                    disabled={false}
+                                    onClick={[Function]}
+                                  >
+                                    <a
+                                      href="#"
+                                      onClick={[Function]}
+                                      onKeyDown={[Function]}
+                                      role="button"
+                                    >
+                                      Logout
+                                    </a>
+                                  </SafeAnchor>
+                                </li>
+                              </NavItem>
+                            </ul>
+                          </Nav>
+                        </div>
+                      </Transition>
+                    </Collapse>
+                  </NavbarCollapse>
+                </div>
+              </Grid>
+            </nav>
+          </Navbar>
+        </Uncontrolled(Navbar)>
+      </Navigation>
+    </Connect(Navigation)>
+  </Router>
+</BrowserRouter>
+`;
+
+exports[`Navigation component renders without authenticated 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Connect(Navigation)
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+    >
+      <Navigation
+        store={
+          Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          }
+        }
+        storeSubscription={
+          Subscription {
+            "listeners": Object {
+              "clear": [Function],
+              "get": [Function],
+              "notify": [Function],
+              "subscribe": [Function],
+            },
+            "onStateChange": [Function],
+            "parentSub": undefined,
+            "store": Object {
+              "clearActions": [Function],
+              "dispatch": [Function],
+              "getActions": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            },
+            "unsubscribe": [Function],
+          }
+        }
+        userHasAuthenticated={[Function]}
+      >
+        <Uncontrolled(Navbar)
+          bsStyle="default"
+          collapseOnSelect={true}
+          fluid={true}
+        >
+          <Navbar
+            bsClass="navbar"
+            bsStyle="default"
+            collapseOnSelect={true}
+            componentClass="nav"
+            fixedBottom={false}
+            fixedTop={false}
+            fluid={true}
+            inverse={false}
+            onToggle={[Function]}
+            staticTop={false}
+          >
+            <nav
+              className="navbar navbar-default"
+            >
+              <Grid
+                bsClass="container"
+                componentClass="div"
+                fluid={true}
+              >
+                <div
+                  className="container-fluid"
+                >
+                  <NavbarHeader>
+                    <div
+                      className="navbar-header"
+                    >
+                      <NavbarBrand>
+                        <Link
+                          className="navbar-brand"
+                          replace={false}
+                          to="/"
+                        >
+                          <a
+                            className="navbar-brand"
+                            href="/"
+                            onClick={[Function]}
+                          >
+                            CodeNote
+                          </a>
+                        </Link>
+                      </NavbarBrand>
+                      <NavbarToggle>
+                        <button
+                          className="navbar-toggle collapsed"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          <span
+                            className="sr-only"
+                          >
+                            Toggle navigation
+                          </span>
+                          <span
+                            className="icon-bar"
+                          />
+                          <span
+                            className="icon-bar"
+                          />
+                          <span
+                            className="icon-bar"
+                          />
+                        </button>
+                      </NavbarToggle>
+                    </div>
+                  </NavbarHeader>
+                  <NavbarCollapse>
+                    <Collapse
+                      appear={false}
+                      dimension="height"
+                      getDimensionValue={[Function]}
+                      in={false}
+                      mountOnEnter={false}
+                      timeout={300}
+                      unmountOnExit={false}
+                    >
+                      <Transition
+                        appear={false}
+                        aria-expanded={null}
+                        enter={true}
+                        exit={true}
+                        in={false}
+                        mountOnEnter={false}
+                        onEnter={[Function]}
+                        onEntered={[Function]}
+                        onEntering={[Function]}
+                        onExit={[Function]}
+                        onExited={[Function]}
+                        onExiting={[Function]}
+                        timeout={300}
+                        unmountOnExit={false}
+                      >
+                        <div
+                          aria-expanded={null}
+                          className="navbar-collapse collapse"
+                        >
+                          <Nav
+                            bsClass="nav"
+                            justified={false}
+                            pullLeft={false}
+                            pullRight={true}
+                            stacked={false}
+                          >
+                            <ul
+                              className="nav navbar-nav navbar-right"
+                              role={null}
+                            >
+                              <LinkContainer
+                                activeClassName="active"
+                                exact={false}
+                                replace={false}
+                                strict={false}
+                                to="/signup"
+                              >
+                                <Route
+                                  exact={false}
+                                  path="/signup"
+                                  strict={false}
+                                >
+                                  <NavItem
+                                    active={false}
+                                    className=""
+                                    disabled={false}
+                                    href="/signup"
+                                    onClick={[Function]}
+                                  >
+                                    <li
+                                      className=""
+                                      role="presentation"
+                                    >
+                                      <SafeAnchor
+                                        componentClass="a"
+                                        disabled={false}
+                                        href="/signup"
+                                        onClick={[Function]}
+                                      >
+                                        <a
+                                          href="/signup"
+                                          onClick={[Function]}
+                                          onKeyDown={[Function]}
+                                        >
+                                          Signup
+                                        </a>
+                                      </SafeAnchor>
+                                    </li>
+                                  </NavItem>
+                                </Route>
+                              </LinkContainer>
+                              <LinkContainer
+                                activeClassName="active"
+                                exact={false}
+                                replace={false}
+                                strict={false}
+                                to="/login"
+                              >
+                                <Route
+                                  exact={false}
+                                  path="/login"
+                                  strict={false}
+                                >
+                                  <NavItem
+                                    active={false}
+                                    className=""
+                                    disabled={false}
+                                    href="/login"
+                                    onClick={[Function]}
+                                  >
+                                    <li
+                                      className=""
+                                      role="presentation"
+                                    >
+                                      <SafeAnchor
+                                        componentClass="a"
+                                        disabled={false}
+                                        href="/login"
+                                        onClick={[Function]}
+                                      >
+                                        <a
+                                          href="/login"
+                                          onClick={[Function]}
+                                          onKeyDown={[Function]}
+                                        >
+                                          Login
+                                        </a>
+                                      </SafeAnchor>
+                                    </li>
+                                  </NavItem>
+                                </Route>
+                              </LinkContainer>
+                            </ul>
+                          </Nav>
+                        </div>
+                      </Transition>
+                    </Collapse>
+                  </NavbarCollapse>
+                </div>
+              </Grid>
+            </nav>
+          </Navbar>
+        </Uncontrolled(Navbar)>
+      </Navigation>
+    </Connect(Navigation)>
+  </Router>
+</BrowserRouter>
+`;

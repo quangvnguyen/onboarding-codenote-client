@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with disabled 1`] = `
+<Button
+  active={false}
+  block={false}
+  bsClass="btn"
+  bsStyle="default"
+  className="LoaderButton "
+  disabled={true}
+/>
+`;
+
+exports[`renders with loading 1`] = `
+<Button
+  active={false}
+  block={false}
+  bsClass="btn"
+  bsStyle="default"
+  className="LoaderButton "
+  disabled={true}
+>
+  <Glyphicon
+    bsClass="glyphicon"
+    className="spinning"
+    glyph="refresh"
+  />
+</Button>
+`;
+
+exports[`renders without disabled 1`] = `
+<Button
+  active={false}
+  block={false}
+  bsClass="btn"
+  bsStyle="default"
+  className="LoaderButton "
+  disabled={false}
+/>
+`;
+
+exports[`renders without loading 1`] = `
+<Button
+  active={false}
+  block={false}
+  bsClass="btn"
+  bsStyle="default"
+  className="LoaderButton "
+  disabled={false}
+/>
+`;

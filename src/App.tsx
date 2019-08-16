@@ -18,7 +18,7 @@ interface IProps {
   history: History,
 }
 
-class App extends Component<IProps, IStates> {
+export class App extends Component<IProps, IStates> {
   constructor(props) {
     super(props);
 
@@ -39,12 +39,6 @@ class App extends Component<IProps, IStates> {
     }
 
     this.setState({ isAuthenticating: false });
-  }
-
-  handleLogout = async () => {
-    await Auth.signOut();
-    this.props.userHasAuthenticated(false);
-    this.props.history.push('/login');
   }
 
   render() {
